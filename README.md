@@ -25,25 +25,25 @@ class ДаніОбчислення implements Serializable {
     private final double параметр2;
     private transient double результат;
 
-    public ДаніОбчислення(double парам1, double парам2) {
+    ДаніОбчислення(double парам1, double парам2) {
         this.параметр1 = парам1;
         this.параметр2 = парам2;
         this.результат = 0.0;
     }
 
-    public void обчислитиРезультат() {
+    void обчислитиРезультат() {
         this.результат = параметр1 + параметр2;
     }
 
-    public double отриматиПараметр1() {
+    double отриматиПараметр1() {
         return параметр1;
     }
 
-    public double отриматиПараметр2() {
+    double отриматиПараметр2() {
         return параметр2;
     }
 
-    public double отриматиРезультат() {
+    double отриматиРезультат() {
         return результат;
     }
 }
@@ -51,18 +51,16 @@ class ДаніОбчислення implements Serializable {
 class Калькулятор {
     private final ДаніОбчислення дані;
 
-    public Калькулятор(double парам1, double парам2) {
+    Калькулятор(double парам1, double парам2) {
         this.дані = new ДаніОбчислення(парам1, парам2);
         this.дані.обчислитиРезультат();
     }
 
-    public double отриматиРезультат() {
+    double отриматиРезультат() {
         return дані.отриматиРезультат();
     }
 
-    public ДаніОбчислення отриматиДані() {
+    ДаніОбчислення отриматиДані() {
         return дані;
     }
 }
-
-#2
