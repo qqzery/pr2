@@ -17,10 +17,12 @@ System.out.println(arg);
 
 day 2
 //
-
+#1
 import java.io.Serializable;
 
-class ДаніОбчислення implements Serializable {
+class ДаніОбчислення implements Serializable 
+{
+
     private final double параметр1;
     private final double параметр2;
     private transient double результат;
@@ -42,8 +44,8 @@ class ДаніОбчислення implements Serializable {
         return результат;
     }
 }
-
 class Калькулятор {
+
     private final ДаніОбчислення дані;
     Калькулятор(double парам1, double парам2) {
         this.дані = new ДаніОбчислення(парам1, парам2);
@@ -56,3 +58,7 @@ class Калькулятор {
         return дані;
     }
 }
+
+///
+
+#2
